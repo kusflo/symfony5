@@ -19,6 +19,8 @@ easy_admin:
           - author
           - { property: 'email', type: 'email' }
           - { property: 'createdAt', type: 'datetime' }
+          - photoFilename
+          - conference
         sort: ['createdAt', 'ASC']
         filters: ['conference']
       edit:
