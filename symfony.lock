@@ -292,6 +292,9 @@
     "symfony/orm-pack": {
         "version": "v2.0.0"
     },
+    "symfony/polyfill-intl-grapheme": {
+        "version": "v1.18.1"
+    },
     "symfony/polyfill-intl-icu": {
         "version": "v1.18.1"
     },
@@ -358,6 +361,9 @@
         "version": "v2.2.0"
     },
     "symfony/stopwatch": {
+        "version": "v5.0.11"
+    },
+    "symfony/string": {
         "version": "v5.0.11"
     },
     "symfony/translation": {
