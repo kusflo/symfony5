@@ -19,7 +19,7 @@ easy_admin:
           - author
           - { property: 'email', type: 'email' }
           - { property: 'createdAt', type: 'datetime' }
-          - photoFilename
+          - { property: 'photoFilename', type: 'image', 'base_path': '/upload/photos', label: 'Photo' }
           - conference
         sort: ['createdAt', 'ASC']
         filters: ['conference']
