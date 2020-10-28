@@ -25,12 +25,25 @@ class ConferenceControllerTest extends WebTestCase
         $this->assertSelectorTextContains('h2','Give me you feedback!');
     }
 
+    public function testConferencePage()
+    {
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/');
 
+        $this->assertCount(2, $crawler->filter('h4'));
+
+        $client->clickLink('View');
+
+        $this->assertPageTitleContains('Amsterdam');
+        $this->assertResponseIsSuccessful();
+        $this->assertSelectorTextContains('h2', 'Amsterdam 2019');
+        $this->assertSelectorExists('div:contains("There are 1 comments")');
+    }
 
     public function testCommentSubmission()
     {
         $client = static::createClient();
-        $client->request('GET','/conference/amsterdam-2020');
+        $client->request('GET','/conference/amsterdam-2019');
         $client->submitForm('Submit',[
             'comment_form[author]' => 'Jose',
             'comment_form[text]' => 'Prueba unitaria de creación de comentario',

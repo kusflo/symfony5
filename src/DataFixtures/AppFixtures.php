@@ -22,13 +22,13 @@ class AppFixtures extends Fixture
     {
         $amsterdam = new Conference();
         $amsterdam->setCity('Amsterdam');
-        $amsterdam->setYear('2020');
+        $amsterdam->setYear('2019');
         $amsterdam->setIsInternational(true);
         $manager->persist($amsterdam);
 
         $paris = new Conference();
         $paris->setCity('Paris');
-        $paris->setYear('2019');
+        $paris->setYear('2020');
         $paris->setIsInternational(true);
         $manager->persist($paris);
 
