@@ -26,6 +26,7 @@ class ConferenceControllerTest extends WebTestCase
     }
 
 
+
     public function testCommentSubmission()
     {
         $client = static::createClient();
