@@ -34,6 +34,8 @@ class SpamChecker
             ]),
         ]);
 
+        error_log("Pasa por spamchecker");
+
         $headers = $response->getHeaders();
         if ('discard' === ($headers['x-akismet-pro-tip'][0] ?? '')) {
             return 2;
